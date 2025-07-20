@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects – Tasfia Shaheba</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<nav class = "top-bar" > <!--can style this at css-->
+    <a href="index.html" class="home-link">HOME</a> <!-- new index button -->
+
+<div class="dropdown">
+  <button class="dropbtn">→ ABOUT ME ←</button>
+  <div class="dropdown-content">
+   <a href="index.html#skills">Skills</a>
+<a href="index.html#hobbies">Interests/Hobbies</a>
+<a href="index.html#resources">Resources</a>
+
+  </div>
+</div>
+
+
+
+<a class="explore-link" href="projects.html">Explore My Projects</a>
+  <div class=" custom-divider"></div>
+
+
+
+
+
+
+</nav>
+
+
+  <!-- R Analysis Section -->
+  <section class="project-section">
+      <div class="arrow-note">Click title to explore more ↓</div>
+
+<h2>
+  <a href="https://drive.google.com/drive/folders/1ZrLP1XpL4YF58MKVJhVStgPbRnn6FtWe?usp=share_link" target="_blank" class="project-link">
+    R Data Analysis Projects
+  </a>
+</h2>
+   <div class="project-gallery">
+
+  <img src="projectimg1.png" alt="R Project 1" onclick="openLightbox(this.src)" />
+  <img src="projectimg2.jpeg" alt="R Project 2" onclick="openLightbox(this.src)" />
+  <img src="projectimg3.png" alt="R Project 3" onclick="openLightbox(this.src)" />
+
+</div>
+<p class="project-desc">
+      These visualizations were created using R to explore autism research data. I used ggplot2 for custom charts and dplyr for data wrangling, uncovering trends across community samples.
+    </p>
+  </section>
+<!-- Lightbox Container -->
+<div id="lightbox" class="lightbox" onclick="closeLightbox()">
+  <span class="close-btn" onclick="closeLightbox()">&times;</span>
+  <img id="lightbox-img" class="lightbox-img" />
+</div>
+
+
+
+ <!-- Mini Hackathon: Influencer Web -->
+  <section class="project-section">
+          <div class="arrow-note">Click title to explore more ↓</div>
+
+<h2>
+  <a href="https://fiyaa2.github.io/hudamustafa.github.io/" target="_blank" class="project-link">
+    Mini Hackathon – Influencer Website
+  </a>
+</h2>
+ <img src="projectimg4.png" alt="Influencer Project" class="project-image" />
+
+    <p class="project-desc">
+      At the mini-hackathon, I designed a continuous-scroll site for an influencer brand. I implemented responsive layout and custom styling using Tailwind CSS. This project won 1st place!
+    </p>
+  </section>
+
+
+
+
+
+
+  <!-- Hackathon Project: Job Tinder -->
+  <section class="project-section">
+          <div class="arrow-note">Click title to explore more ↓</div>
+
+    <h2>
+      <a href="https://fiyaa2.github.io/interping.github.io/" target="_blank" class="project-link">
+              Hackathon – Jobsite Tinder <br> <small>Intern Ping</small>
+      </a>
+      </h2>
+    <img src="projectimg5.jpeg" alt="Hackathon Project" class="project-image" />
+    <p class="project-desc">
+      During a 24-hour hackathon, we built a web app that lets users swipe through employer profiles, mimicking Tinder’s interface. My role was in HTML/CSS frontend design, branding, and user flow.
+    </p>
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+<script>
+  function openLightbox(src) {
+    document.getElementById("lightbox").style.display = "flex";
+    document.getElementById("lightbox-img").src = src;
+  }
+
+  function closeLightbox() {
+    document.getElementById("lightbox").style.display = "none";
+  }
+</script>
+
+
+
+
+
+
+
+
+</body>
+</html>

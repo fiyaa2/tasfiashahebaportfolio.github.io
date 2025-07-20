@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> <!-- head cointains gen info about page tht isnt displayed in the page itself -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>TASFIA SHAHEBA</title> <!--Assign the name in the tab-->
+  <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;500&display=swap" rel="stylesheet">
+
+
+</head>
+
+
+<body> <!-- body is what user can see-->
+<header>
+
+</header> 
+
+<!-- used for navigation-->
+
+
+
+<nav class = "top-bar" > <!--can style this at css-->
+    <a href="index.html" class="home-link">HOME</a> <!-- new index button -->
+
+<div class="dropdown">
+  <button class="dropbtn">→ ABOUT ME ←</button>
+  <div class="dropdown-content">
+    <a href="#" onclick="scrollToSection('skills')">Skills</a>
+    <a href="#" onclick="scrollToSection('hobbies')">Interests/Hobbies</a>
+    <a href="#" onclick="scrollToSection('resources')">Resources</a>
+  </div>
+</div>
+
+
+
+<a class="explore-link" href="projects.html">Explore My Projects</a>
+  <div class=" custom-divider"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class ="connect-box">
+<h2 class="connect-title">Let’s Connect</h2>
+<div class="social-icons">
+  <a href="https://www.linkedin.com/in/tasfia-shaheba-08433a2ba/"  target="_blank" > <i class="fab fa-linkedin"></i></a>
+  <a href="https://www.instagram.com/fiyaaa___a/" target="_blank"><i class="fab fa-instagram"></i></a>
+  <a href="https://github.com/fiyaa2" target="_blank"><i class="fab fa-github"></i></a>
+  <a href ="https://x.com/thefurinpink" target="_blank"><i class="fab fa-x"></i></a>
+</div>
+
+
+</div>
+<div class="myname">
+  <h1 class="title">Tasfia Shaheba</h1>
+  <h2 class="subtitle">Aspiring Data Analyst</h2>
+  <div class="name-divider"></div>
+
+</div>
+
+
+
+<section class="hero-image-section">
+  <img src="homepage.jpeg" alt="Hero Image" class="hero-image" />
+  <div class="hero-text">
+    <h2>Creative, Ambitious<br>and an Artist.</h2>
+    <p>One thoughtful creation at a time.</p>
+<a href="#" class="learn-more-btn" onclick="scrollToSection('skills')">LEARN MORE</a>
+  </div>
+
+
+</section>
+
+<script src="script.js"></script>
+
+
+
+
+  <div class="name-divider"></div>
+
+<!-- ✅ Blurred background container for ALL 3 sections -->
+<section class="blurred-section">
+  <div class="info-bg"></div> <!-- blurred bg -->
+
+
+   <div id="cards" class="card-container">
+    
+    <!-- Card 1: Skills -->
+    <div class="info-card" id="skills">
+    <h2>Skills</h2>
+    <p>
+      I specialize in data visualization, storytelling through design, and building websites using HTML/CSS. I also enjoy using creative tools like Canva and Figma to bring ideas to life through engaging visuals.
+    </p>
+<p>
+  I am proficient in programming languages including R, Java, Python, C++, MATLAB, and SQL. I'm comfortable working across diverse operating systems such as Windows, macOS, and Linux.
+</p>
+
+  <a href="resume.pdf" target="_blank" class="btn">View Résumé</a>
+</div>
+
+ <!-- Card 2: Hobbies -->
+<div class="info-card" id ="hobbies">
+  <div class="slideshow-container" onmouseover="pauseSlideshow()" onmouseout="resumeSlideshow()">
+    <img class="slide-image" src="imgss1.jpeg" alt="Photography" />
+    <button class="prev" onclick="showPrevImage()">❮</button>
+    <button class="next" onclick="showNextImage()">❯</button>
+  </div>
+
+  <h2>Interests & Hobbies</h2>
+  <p>I enjoy traveling, trying new cuisines, reading books, and photography.</p>
+</div>
+
+
+<!-- Card 3: Resources -->
+<div class="info-card" id="resources">
+  <h2>Resources</h2>
+  <p>
+    Learning has no limits. I believe there's always more to explore and improve. Whenever I face a new challenge, I dive into journals, YouTube tutorials, or books to expand my understanding. I'm always learning, and I’d love to share what I know.
+  </p>
+  <p>
+    Feel free to <strong>contact me</strong> to learn more about any of the skills I’ve developed and how I picked them up—whether it's data, code, or creative tools.
+  </p>
+  <a href="mailto:muskanshaheba320@gmail.com" class="btn">Email Me</a>
+</div>
+
+   </div>
+ 
+</section>
+
+
+
+
+
+
+
+
+
+
+<script>
+  const images = [
+    "imgss1.jpeg", "imgss2.jpeg", "imgss3.jpeg", "imgss4.jpeg",
+    "imgss5.jpeg", "imgss6.jpeg", "imgss7.jpeg", "imgss8.jpeg", "imgss9.jpeg"
+  ];
+  
+  let index = 0;
+  let slideshowInterval;
+  const slideImage = document.querySelector('.slide-image');
+
+  function showImage(i) {
+    index = (i + images.length) % images.length;
+    slideImage.src = images[index];
+  }
+
+  function showNextImage() {
+    showImage(index + 1);
+  }
+
+  function showPrevImage() {
+    showImage(index - 1);
+  }
+
+  function startSlideshow() {
+    slideshowInterval = setInterval(showNextImage, 3000);
+  }
+
+  function pauseSlideshow() {
+    clearInterval(slideshowInterval);
+  }
+
+  function resumeSlideshow() {
+    startSlideshow();
+  }
+
+  window.onload = startSlideshow;
+</script>
+
+
+
+<script>
+  // Prevent anchor scrolling on page reload
+  if (window.location.hash === "#cards") {
+    history.replaceState(null, null, window.location.pathname);
+  }
+</script>
+
+<script>
+  function scrollToSection(id) {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  }
+
+  // Prevent scroll on refresh caused by lingering hash
+  window.addEventListener("load", () => {
+    if (window.location.hash) {
+      history.replaceState(null, null, window.location.pathname);
+    }
+  });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
